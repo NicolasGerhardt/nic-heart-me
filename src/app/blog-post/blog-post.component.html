@@ -1,1 +1,6 @@
-<p>blog-post works!</p>
+<div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+    <div class="card-header">{{ post.title }}</div>
+    <p class="card-text">{{ post.content }}</p>
+    <div class="card-footer text-muted">{{ post.createdAt | date }}
+          </div>
+    </div>
