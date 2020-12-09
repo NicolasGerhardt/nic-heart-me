@@ -1,6 +1,6 @@
-# NicHeartMe
+# NicHeart.me
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.4.
+This is the repository for my personal website that can be seen in action at [www.nicheart.me](www.nicheart.me)
 
 ## Development server
 
