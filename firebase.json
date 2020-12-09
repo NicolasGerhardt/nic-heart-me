@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/nic-heart-me",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
