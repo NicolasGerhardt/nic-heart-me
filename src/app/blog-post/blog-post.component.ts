@@ -9,10 +9,12 @@ import { BlogPost } from '../interfaces/blog-post';
 export class BlogPostComponent implements OnInit {
   @Input() post:BlogPost;
 
+  splitContent: string[] = [];
+
   constructor() { }
 
   ngOnInit(): void {
-    console.log({post: this.post})
+    this.splitContent = this.post.content.split('\n');
   }
 
 }
