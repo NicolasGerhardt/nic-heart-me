@@ -1,0 +1,5 @@
+<div class="card text-white mb-3">
+    <h4 class="card-header">{{ post.title }}</h4>
+    <p class="card-text" *ngFor="let text of splitContent">{{ text }}</p>
+    <div class="card-footer text-muted">{{ post.createdAt | date }}</div>
+    </div>
