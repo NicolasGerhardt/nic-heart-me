@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BlogPost } from '../interfaces/blog-post';
+import { BlogPost } from '../../interfaces/blog-post';
 
 @Component({
   selector: 'app-blog',

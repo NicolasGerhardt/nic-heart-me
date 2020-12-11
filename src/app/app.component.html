@@ -1,2 +1,9 @@
 <app-navbar [title]='title'></app-navbar>
+<div *ngIf="auth.user$ | async as user; else login">
+    <button class="btn btn-primary" (click)="auth.signOut()">Sign out</button>
+</div>
+<ng-template #login>
+    <button class="btn btn-primary" (click)="auth.googleSignin()">Sign in</button>
+</ng-template>
+
 <router-outlet></router-outlet>
