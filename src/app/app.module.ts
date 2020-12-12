@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { environment } from '../environments/environment';
 
 import { RouterModule, Routes } from '@angular/router';
 import { AngularFireModule } from '@angular/fire';
@@ -11,12 +12,12 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { BlogComponent } from './components/blog/blog.component';
 import { BlogPostComponent } from './components/blog-post/blog-post.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
-
-import { environment } from '../environments/environment';
+import { LoginComponent } from './components/login/login.component';
 
 const routes: Routes = [
   { path: 'about', component: AboutMeComponent },
   { path: 'blog', component: BlogComponent },
+  { path: 'login', component: LoginComponent},
   { path: '', component: BlogComponent },
   { path: '**', redirectTo: '/', pathMatch: 'full' },
 ];
@@ -28,6 +29,7 @@ const routes: Routes = [
     BlogComponent,
     BlogPostComponent,
     AboutMeComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

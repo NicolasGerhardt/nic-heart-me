@@ -11,16 +11,10 @@
         <a class="nav-link" href="blog">Blog
         </a>
       </li>
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" href="about">About Me
         </a>
       </li>
     </ul>
-    <div class="form-inline my-2 my-lg-0" *ngIf="auth.user$ | async as user; else login">
-      <button class="btn btn-secondary my-2 my-sm-0" (click)="auth.signOut()">Sign out</button>
-    </div>
-    <ng-template #login>
-      <button class="btn btn-primary my-2 my-sm-0" (click)="auth.googleSignin()">Sign in</button>
-    </ng-template>
   </div>
 </nav>
