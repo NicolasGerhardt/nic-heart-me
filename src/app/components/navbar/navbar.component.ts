@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { AuthService } from 'src/app/services/auth.service';
+
 
 const _collapseClass = 'collapse';
 
@@ -10,7 +12,7 @@ const _collapseClass = 'collapse';
 export class NavbarComponent implements OnInit {
   @Input() title: string;
 
-  constructor() {}
+  constructor(public auth: AuthService) {}
 
   ngOnInit(): void {}
 

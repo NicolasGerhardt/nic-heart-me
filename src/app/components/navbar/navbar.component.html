@@ -8,14 +8,24 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" href="blog">Blog
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="about">About Me
+        <a class="nav-link" href="about">About
         </a>
       </li>
+      <div *ngIf="auth.user$ | async as user" class="container">
+        <li *ngIf="user.admin" class="nav-item">
+          <a class="nav-link" href="blog-edit">Edit Blog
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="login">Sign out
+          </a>
+        </li>
+      </div>
     </ul>
   </div>
 </nav>
