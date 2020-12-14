@@ -13,10 +13,13 @@ import { BlogComponent } from './components/blog/blog.component';
 import { BlogPostComponent } from './components/blog-post/blog-post.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
 import { LoginComponent } from './components/login/login.component';
+import { BlogEditComponent } from './components/blog-edit/blog-edit.component';
+import { AuthGuard } from './services/auth.guard';
 
 const routes: Routes = [
   { path: 'about', component: AboutMeComponent },
   { path: 'blog', component: BlogComponent },
+  { path: 'blog-edit', component: BlogEditComponent, canActivate: [AuthGuard] },
   { path: 'login', component: LoginComponent},
   { path: '', component: BlogComponent },
   { path: '**', redirectTo: '/', pathMatch: 'full' },
@@ -30,6 +33,7 @@ const routes: Routes = [
     BlogPostComponent,
     AboutMeComponent,
     LoginComponent,
+    BlogEditComponent,
   ],
   imports: [
     BrowserModule,
