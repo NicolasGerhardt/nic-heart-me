@@ -12,15 +12,15 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { BlogComponent } from './components/blog/blog.component';
 import { BlogPostComponent } from './components/blog-post/blog-post.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
-import { LoginComponent } from './components/login/login.component';
 import { BlogEditComponent } from './components/blog-edit/blog-edit.component';
 import { AuthGuard } from './services/auth.guard';
+import { AuthComponent } from './components/auth/auth.component';
 
 const routes: Routes = [
   { path: 'about', component: AboutMeComponent },
   { path: 'blog', component: BlogComponent },
   { path: 'blog-edit', component: BlogEditComponent, canActivate: [AuthGuard] },
-  { path: 'login', component: LoginComponent},
+  { path: 'auth', component: AuthComponent },
   { path: '', component: BlogComponent },
   { path: '**', redirectTo: '/', pathMatch: 'full' },
 ];
@@ -32,8 +32,8 @@ const routes: Routes = [
     BlogComponent,
     BlogPostComponent,
     AboutMeComponent,
-    LoginComponent,
     BlogEditComponent,
+    AuthComponent,
   ],
   imports: [
     BrowserModule,
