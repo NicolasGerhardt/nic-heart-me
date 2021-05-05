@@ -11,7 +11,7 @@ import {
 import { Observable, of } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 
-import { User } from './user.model';
+import { User } from '../interfaces/user.model';
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {

@@ -15,6 +15,7 @@ import { AboutMeComponent } from './components/about-me/about-me.component';
 import { BlogEditComponent } from './components/blog-edit/blog-edit.component';
 import { AuthGuard } from './services/auth.guard';
 import { AuthComponent } from './components/auth/auth.component';
+import { BlogPostEditComponent } from './components/blog-post-edit/blog-post-edit.component';
 
 const routes: Routes = [
   { path: 'about', component: AboutMeComponent },
@@ -34,6 +35,7 @@ const routes: Routes = [
     AboutMeComponent,
     BlogEditComponent,
     AuthComponent,
+    BlogPostEditComponent,
   ],
   imports: [
     BrowserModule,
